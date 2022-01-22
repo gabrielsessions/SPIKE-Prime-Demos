@@ -2,10 +2,16 @@
 //Takes in an array of elements and applies a fade in effect when the page is loaded
 function fadeInElements(elements) {
 
-    for (let element of elements) {
-        $(element).hide();
-        $(element).fadeIn();
+    for (let i = 0; i < elements.length; i++) {
+        $(elements[i]).hide();
+
+        setTimeout(() => {
+            $(elements[i]).fadeIn();
+        }, i*250 + 100);
+        
+        
     }
+    
    
     
 }
@@ -15,14 +21,23 @@ function fadeInElements(elements) {
 
 $(document).ready( () => {
 
-    jQuery.fx.interval = 10000;
+    //jQuery.fx.interval = 10000;
 
     animatedElements = ['#tutorialsButtonBox', 
                         '#templateButtonBox', 
-                        '#demosButtonBox'];
+                        '#demosButtonBox',
+                        '#creditsBox'];
 
-    fadeInElements(animatedElements);
+    //fadeInElements(animatedElements);
 
     console.log("ready");
+
+
+
+    $('#viewDemosButton').click( () => {
+        window.location.href = "demoList.html";
+    });
+
+
 } );
 

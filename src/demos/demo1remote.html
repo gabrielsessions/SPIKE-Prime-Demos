@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Demo 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Uses Tailwind CSS-->
+        <link rel="stylesheet" href="../../public/output.css">
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script src="demosJS/sidebar.js"></script>
+    </head>
+    <body>
+
+        <!-- Original Template from: https://www.youtube.com/watch?v=DOOoS6GHDw8 -->
+        <div class="relative min-h-screen md:flex">
+
+            <!-- mobile menu bar -->
+            <div class="bg-tufts-blue text-white flex justify-between md:hidden">
+
+          
+              <!-- mobile menu button -->
+              <button class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
+                <a href="../demoList.html">Demo Projects</a>
+              </button>
+            </div>
+          
+            <!-- sidebar -->
+            <div id="sidebar" class="hidden bg-tufts-blue text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out" data-toggled="false">
+          
+              <!-- logo -->
+              <a href="../demoList.html" class="text-white flex items-center space-x-2 px-4">
+                <img class="w-20" src="../../img/codingWhiteImg.png" alt="web dev image">
+                <span class="text-2xl font-bold pl-3">Demo Projects</span>
+              </a>
+          
+              <!-- nav -->
+              <nav>
+                <a href="../demoList.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+                    <span class="inline-block">Home&nbsp;</span>
+                </a>
+
+
+                <button id="demo_1_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+                    <span class="inline-block">1: Simple Buttons&nbsp;</span>
+                    <img id="arrow_1" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+                </button>
+
+
+                <button id="demo_2_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+                    <span class="inline-block">2: Simple Buttons&nbsp;</span>
+                    <img id="arrow_2" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+                </button>
+
+                
+                
+              </nav>
+            </div>
+          
+            <!-- content -->
+            <div class="px-3 py-2">
+              <button id="hamburger_menu" type="image">
+                <img src="../../img/hambuger-menu.png" class="w-8">
+              </button>
+            </div>
+            
+            <div class="flex-1 p-10 text-2xl font-bold">
+              content goes here
+            </div>
+          
+        </div>
+
+
+        <script id="tabLinks" type="text/html">
+            
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+                Remote Page
+                
+            </a>
+
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.htm">
+                Local Page
+                
+            </a>
+
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="#">
+                Documentation
+                
+            </a>
+            
+            
+        </script>
+
+
+
+    </body>
+</html>
