@@ -1,0 +1,207 @@
+<!--
+    SPIKE Prime Web Projects
+    Gabriel Sessions
+
+    Purpose: Compile resources for students to use when building their final EN 1 project
+
+    Attributions To Add: 
+
+    <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a>
+
+    <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a>
+-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Page</title>
+        <meta name="description" content="">
+
+        <!--Uses Tailwind CSS-->
+        <link rel="stylesheet" href="public/output.css">
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+
+        <script src="js/index.js"></script>
+
+    </head>
+    <body>
+        
+        <!-- Navbar -->
+
+        <div class="bg-gray-100 max-w-8xl text-sans sticky top-0 ">
+            <ul class="flex py-4 grow-0">
+
+                <!-- Image and Webpage title link to the home page (index.html) -->
+                <div class="mr-1 ml-6">
+                    <li>
+                        <a href = "https://google.com">
+                        <img src="img/coding.png" class="h-10 w-auto">
+                        </a>
+                    </li>
+                </div>
+            
+                <div class="mr-14 ml-1">
+                    <li>
+                        <a href="./index.html">
+                            <h1 class="py-1 px-3 text-xl text-black font-bold">SPIKE Prime Web Projects</h1>
+                        </a>
+                    </li>
+                </div>
+
+
+                <!-- Navbar Tabs -->
+                <div class="mr-4">
+                    <li>
+                    <a class="inline-block border border-tufts-blue rounded py-1 px-3 bg-tufts-blue text-white" href="./index.html">Home</a>
+                    </li>
+                </div>
+                <li class="mr-4">
+                <a class="inline-block border border-gray-100 rounded hover:border-gray-200 text-tufts-blue hover:bg-gray-200 py-1 px-3" href="#">Tutorials</a>
+                </li>
+                <li class="mr-4">
+                    <a class="inline-block border border-gray-100 rounded hover:border-gray-200 text-tufts-blue hover:bg-gray-200 py-1 px-3" href="./demoList.html">Demos</a>
+                </li>
+                <li class="mr-4">
+                    <a class="inline-block border border-gray-100 rounded hover:border-gray-200 text-tufts-blue hover:bg-gray-200 py-1 px-3" href="#">Template Project</a>
+                </li>
+
+                <!-- Dropdown template from https://flowbite.com/docs/components/dropdowns/ -->
+                <li class="mr-4">
+                    <a class="inline-block border border-gray-100 rounded hover:border-gray-200 text-tufts-blue hover:bg-gray-200 py-1 px-3" href="#">Documentation</a>
+
+                </li>
+            </ul>
+
+        </div>
+    
+        <!--Main Homepage Content-->
+        <div class="w-full h-full bg-no-repeat bg-cover bg-fixed bg-homepage">
+        <div class="w-full h-full bg-cover bg-white/70">
+
+        <!-- Dropdown Menu Loaded into page with index.js -->
+        <!--
+        <div class="hidden origin-top-right w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none relative top-0 left-2/3" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="" role="none"> 
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+            </div>
+        </div>
+        -->
+        <!-- Page Title -->
+        <h1 class="text-center justify-center pt-8 mb-12 text-6xl font-sans text-black">SPIKE Prime Web Projects</h1>
+
+
+        <!--Two smaller boxes for tutorials and template project-->
+        <div class="grid grid-cols-2">
+
+
+            <div id="tutorialsButtonBox" class="flex justify-center">
+                <div class="border rounded-md border-white bg-white mt-10 mb-16 shadow-xl w-1/2">
+                    <div class="text-xl text-center justify-center pt-6 mx-1">
+                        Web Programming Help
+                    </div>
+                    <div class="justify-center text-center">
+                        <button class="border bg-tufts-blue order-gray-100 rounded hover:bg-tufts-darker-blue text-white py-2 px-3 my-8">HTML/CSS/JS Tutorials</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+
+            <div id="templateButtonBox" class="flex justify-center">
+                <div class="border rounded-md border-white bg-white mt-10 mb-16 shadow-xl w-1/2">
+                    <div class="text-xl text-center justify-center pt-6 mx-1">
+                        Getting Started?
+                    </div>
+                    <div class="justify-center text-center">
+                        <button class="border bg-tufts-blue order-gray-100 rounded hover:bg-tufts-darker-blue text-white py-2 px-3 my-8">Check out the template project!</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        
+        </div>
+        
+
+
+        <!-- Larger Block with Demos -->
+        <div class="flex justify-center">
+            <div id="demosButtonBox" class="border rounded-md border-white bg-white mt-4 mb-16 shadow-xl w-1/2">
+                <div class="text-xl text-center justify-center pt-6 pb-3">
+                    Example Projects/Demos
+                </div>
+
+                <!-- Three Columns for Demos -->
+                <div class="justify-center text-center">
+
+                    <div class="grid grid-cols-3 text-center">
+                        <div>
+                            Demo 1: Stuff<br>
+                            Demo 2: Stuff
+                        </div>
+                            Demo 3: Stuff<br>
+                            Demo 4: Stuff
+                        <div>
+                            Demo 5: Stuff<br>
+                            Demo 6: Stuff
+                        </div>
+
+                    </div>
+
+                    <button class="border bg-tufts-blue order-gray-100 rounded hover:bg-tufts-darker-blue text-white py-2 px-3 my-8">View All Examples</button>
+
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+
+
+        <!-- Footer -->
+
+        <div class="flex justify-center">
+            <div id="demosButtonBox" class="border rounded-md border-white bg-white mt-4 mb-16 mx-10 shadow-xl w-full">
+
+                
+                <div class="justify-center text-center py-10">
+
+                    Credits/Attributions <br>
+
+                    <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a> <br>
+
+                    <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a> <br>
+
+
+
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+        <!--End Div Tags for background images-->
+        </div>
+        </div>
+        
+         
+
+
+        
+
+
+        
+        
+    </body>
+</html>
