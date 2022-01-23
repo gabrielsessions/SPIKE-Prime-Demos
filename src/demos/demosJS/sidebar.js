@@ -8,6 +8,8 @@ Purpose: Provide submenu and toggleable functionality to the sidebar on the demo
 
 */
 
+//TODO: Generate main tabs in addition to submenus in this file
+
 const NUM_OF_TABS = 2;
 
 const SUBMENU_PREFIX = "demo";
@@ -83,8 +85,6 @@ function setUpTabToggles (arrOfTabs) {
 
         $(arrOfTabs[i]).click(function() {
 
-            
-
             if ($(arrOfTabs[i]).attr("data-dropdown") == "false") {
                 $("#" + SUBMENU_ID_PREFIX + demoNum + SUBMENU_ID_SUFFIX).attr('hidden', false); //Note: no # on SUBMENU_ID_PREFIX
 
@@ -92,7 +92,6 @@ function setUpTabToggles (arrOfTabs) {
 
                 changeTabArrowDirection(arrOfTabs[i], true);
             }
-
             else {
                 $("#" + SUBMENU_ID_PREFIX + demoNum + SUBMENU_ID_SUFFIX).attr('hidden', true);
 
@@ -119,15 +118,6 @@ function changeTabArrowDirection(tabId, status) {
     
 }
 
-
-/*
-$('#myDiv').animate({
-    height: '200px',
-    width: '200px'
-},
-5000);
-*/
-
 //When the sidebar icon is clicked, the sidebar is either shown or hidden
 function toggleMenu () {
     if ( $(SIDEBAR_ID).hasClass('hidden')) {
@@ -145,17 +135,32 @@ function toggleMenu () {
     }
 }
 
+//Moves an object left or right with an animation
 function moveXAnimation(elementId, px) {
     $(SIDEBAR_ID).animate({
         'marginLeft': px
       }, ANIMATION_LENGTH);
 }
 
+//Same as above function w/o animation
 function moveX (elementId, px) {
     $(SIDEBAR_ID).animate({
         'marginLeft': px
       });
 }
+
+//Assigns correct links to upper nav bar buttons 
+function createUpperNav() {
+
+    //Finds name of current file
+    const currentPathArr = window.location.pathname.split('/');
+    const docName = currentPathArr[currentPathArr.length-1];
+
+    console.log((docName));
+
+
+}
+
 
 $(document).ready(() => {
 
@@ -168,6 +173,8 @@ $(document).ready(() => {
     $(MENU_ICON_ID).click(() => {
         console.log( $(SIDEBAR_ID).hasClass('hidden'));
         toggleMenu();
-    })
+    });
+
+    createUpperNav();
     
-})
+});
