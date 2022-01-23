@@ -7,8 +7,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-        <!--Uses Tailwind CSS-->
+        <!--Tailwind CSS Output - Requires NodeJS -->
+        <!-- 
+          Termninal command to generate CSS: 
+          npx tailwindcss -i src/input.css -o public/output.css
+        -->
         <link rel="stylesheet" href="../../public/output.css">
 
         <!--jQuery-->
@@ -20,7 +23,10 @@
         <script src="demosJS/cloud.js" charset="utf-8"></script>
         <link rel="stylesheet" href="./demosJS/style.css" />
 
-        <!--New JS Code-->
+        <!--File Saver-->
+        <script src="demosJS/fileSaver.js"></script>
+
+        <!--Custom JS Code for this project-->
         <script src="demosJS/sidebar.js"></script>
         <script src ="demosJS/loadDemo.js"></script>
 
@@ -91,13 +97,13 @@
               <h1 class="font-bold pt-4 pb-2 mb-3 mt-1 text-xl text-left inline-block">&nbsp; Demo 1: Simple Buttons</h1>
 
               <div class="inline-block ml-6 justify-between text-lg">
-                <button type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 p-1">
+                <button id="remoteUpperTab" type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 p-1">
                   Remote
                 </button>
-                <button type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
+                <button id="localUpperTab" type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
                   Local
                 </button>
-                <button type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
+                <button id="documentationUpperTab" type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
                   Documentation
                 </button>
               </div>
@@ -107,7 +113,19 @@
 
                 <!-- Edit Code Column -->
                 <div class="border border-black p-2">
-                  <p class="mt-2 mb-3">Modify this project!</p>
+
+                  <p class="mt-2 mb-1">Modify this project!</p>
+                  <!-- 
+                    Icon Attribution 
+                  <a href="https://www.flaticon.com/free-icons/download" title="download icons">Download icons created by Kiranshastry - Flaticon</a>
+                  -->
+                  <button id="downloadButton" type="image" class="hover:bg-gray-300 px-2 rounded inline-block">
+                    <p class="font-normal text-xl mb-2  inline-block">Download</p>
+                    <img src="../../img/download.png" alt="download" class="h-6 inline-block">
+                  </button>
+
+                  <p class="text-sm mb-2 text-red-500 inline-block">Download this page to save your work</p>
+                  
 
                   <!--https://tailwind-elements.com/docs/standard/forms/textarea/-->
                   
@@ -139,8 +157,6 @@
                     
                   > </textarea>
                   </div> 
-                    
-                  <p class="text-sm mb-2 text-red-500">Your changes will be deleted when you leave this page. Please download your work to save it!</p>
 
                   <button type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 mt-2 mb-4 p-2 text-xl hover:bg-tufts-darker-blue" id="changeHTMLButton">
                     Apply Changes
@@ -254,7 +270,30 @@
 
 
 
+
+
+
+
     </body>
+
+
+
+<!--Template used for download-->
+<!--This code Will trigger an error in the console due to the generalized file paths-->
+<script id="downloadShell" type="text/html">
+<head>
+  <title>Demo 01: Simple Buttons (Remote)</title>
+
+
+  <!-- Add Script Tags to secret.js and cloud.js below the Service Dock CDN -->
+
+  <!-- Add link tags to your stylesheets here -->
+
+</head>
+
+<!-- Body Inserted Here Automatically -->
+
+</script>
 
 
 

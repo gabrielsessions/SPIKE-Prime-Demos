@@ -1,5 +1,6 @@
 
 //Takes in an array of elements and applies a fade in effect when the page is loaded
+//Not currently in use
 function fadeInElements(elements) {
 
     for (let i = 0; i < elements.length; i++) {
@@ -12,12 +13,7 @@ function fadeInElements(elements) {
         
     }
     
-   
-    
 }
-
-
-
 
 $(document).ready( () => {
 

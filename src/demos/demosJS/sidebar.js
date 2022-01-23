@@ -32,6 +32,8 @@ const ANIMATION_LENGTH = 500;
 const SIDEBAR_HIDDEN_MARGIN = "-16rem"; //Tailwind class w-64
 const SIDEBAR_DISPLAY_MARGIN = "0rem";
 
+const UPPER_TAB_IDS = ['#remoteUpperTab', '#localUpperTab', '#documentationUpperTab'];
+
 //Returns the demo number from a demo id string
 function demoNumber (demoId) {
     return (demoId.split("_")[1]);
@@ -156,7 +158,16 @@ function createUpperNav() {
     const currentPathArr = window.location.pathname.split('/');
     const docName = currentPathArr[currentPathArr.length-1];
 
-    console.log((docName));
+    const int = /\d+/;
+    const demoNum = docName.match(int);
+
+    for (let i = 0; i < UPPER_TAB_IDS.length; i++) {
+        $(UPPER_TAB_IDS[i]).click(() => {
+            console.log("hello");
+            window.location.href = SUBMENU_PREFIX + demoNum + SUBMENU_SUFFIX[i];
+            
+        });
+    }
 
 
 }
