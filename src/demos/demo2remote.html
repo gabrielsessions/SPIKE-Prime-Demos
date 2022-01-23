@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Demo 1</title>
+        <title>Demo 2</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -94,7 +94,7 @@
             
 
             <div class="flex-1 pb-10 text-2xl font-bold -translate-y-2">
-              <h1 class="font-bold pt-4 pb-2 mb-3 mt-1 text-xl text-left inline-block">&nbsp; Demo 1: Simple Buttons</h1>
+              <h1 class="font-bold pt-4 pb-2 mb-3 mt-1 text-xl text-left inline-block">&nbsp; Demo 2: Range Sliders</h1>
 
               <div class="inline-block ml-6 justify-between text-lg">
                 <button id="remoteUpperTab" type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 p-1">
@@ -247,27 +247,7 @@
 
 
         <script id="demoContent" type="text/html">
-<!-- NOTE: This project uses Tailwind CSS -->
-<!-- To view this page without Tailwind, please download this file -->
-<div id="servicedock">
-  <service-airtable id="service_airtable" tablename="demo01" hidden></service-airtable>
-</div>
-
-<div class="text-black">
-
-  <h1 class="text-xl">Demo 01: Simple Buttons</h1> 
-  <h2 class="text-sans text-lg font-normal">Remote Interface</h2>
-
-  <p class="text-sans text-sm font-normal">This demo shows simple buttons that activate code within SPIKE Prime Slots.</p> <br>
-
-  
-
-  <button class="border border-black hover:bg-gray-300" cloud_action='update' cloud_name='command'>Forward</button>
-  <button class="border border-black hover:bg-gray-300" cloud_action='update' cloud_name='command'>Backward</button>
-  <button class="border border-black hover:bg-gray-300" cloud_action='update' cloud_name='command'>Stop</button>
-
-</div>
-
+            <p class="text-xl">Coming Soon!</p>
         </script>
 
 
@@ -284,7 +264,7 @@
 <!--This code Will trigger an error in the console due to the generalized file paths-->
 <script id="downloadShell" type="text/html">
 <head>
-  <title>Demo 01: Simple Buttons (Remote)</title>
+  <title>Demo 02: Range Sliders (Remote)</title>
 
 
   <!-- Add Script Tags to secret.js and cloud.js below the Service Dock CDN -->
@@ -298,37 +278,6 @@
 </script>
 
 
-
-
-    <script>
-      var mycode = `
-      # MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-  from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
-  from spike.control import wait_for_seconds, wait_until, Timer
-  
-  hub = PrimeHub()
-  
-  # Port Letter is on the hub
-  
-  motorA = Motor ('A') #large motor for arm
-  motorB = Motor ('B') #medium motor for arm 
-  
-  init_power = 100
-  
-  motorA.start_at_power(init_power)
-  motorB.start_at_power(init_power)
-  
-  #pattern will be drawn for 12 seconds
-  wait_for_seconds(12)
-  
-  motorA.stop()
-  motorB.stop()
-  
-  
-      `
-  
-      
-  </script>
 
 
 </html>

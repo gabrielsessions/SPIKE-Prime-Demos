@@ -94,7 +94,7 @@
             
             <!-- Upper Navbar -->
             <div class="flex-1 pb-10 text-2xl font-bold -translate-y-2">
-              <h1 class="font-bold pt-4 pb-2 mb-3 mt-1 text-xl text-left inline-block">&nbsp; Demo 1: Simple Buttons</h1>
+              <h1 class="font-bold pt-4 pb-2 mb-3 mt-1 text-xl text-left inline-block">&nbsp; Demo 2: Range Sliders</h1>
 
               <div class="inline-block ml-6 justify-between text-lg">
                 <button id="remoteUpperTab" type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
@@ -164,110 +164,7 @@
 
 <script id="documentationOriginalCode" type="text/html">
 
-<p class="font-normal mt-4">This demo shows simple buttons that activate code within SPIKE Prime Slots.</p>
-
-<h2 class="text-3xl py-3">Documentation</h2>
-
-  <p class="font-normal">Be sure to view the <a href="../documentation/index.html">overall Documentation</a> for configuring
-      the cloud storage (API key, Base ID, etc) and for more information on how the entire system works.</p>
-
-  <h3 class="text-2xl py-2">Airtable Setup</h3>
-
-  <blockquote>
-
-      <p class="font-normal mb-2">The "Name" column has an entry "command" that will hold the different
-          commands being sent by the buttons. The "Value" can be "Forward",
-          "Backward", or "Stop".</p>
-
-      <img class="documentation_image mb-4" src="../../img/demo1/demo01_airtable.png">
-
-  </blockquote>
-
-  <h3 class="text-2xl py-2 mt-6">Remote Page Setup</h3>
-
-  <blockquote>
-
-      <p><b>Service Dock</b></p>
-
-      <p class="font-normal mb-2">The remote page has the Airtable Service Dock element. Make sure to
-          update the <em>tablename</em> attribute to match your table name.</p>
-
-      <img class="documentation_image mb-4" src="../../img/demo1/demo01_remote_servicedock.png">
-
-      <p><b>Remote Interface</b></p>
-
-      <p class="font-normal mb-2">These simple HTML buttons will "update" the Airtable data "command" to be
-          "Forward", "Backward", or "Stop" respectively.</p>
-
-      <img class="documentation_image mb-4" src="../../img/demo1/demo01_remote_code.png">
-
-      <p class="font-normal mb-2">This is how these three buttons will look on the Remote Page:</p>
-
-      <img class="documentation_image mb-4" src="../../img/demo1/demo01_remote_interface.png">
-
-  </blockquote>
-
-  <h3 class="text-2xl py-2 mt-6">Local Page Setup</h3>
-
-  <blockquote>
-
-      <p class="font-normal"><b>Service Dock</b></p>
-
-      <p class="font-normal mb-2">The local page has both the Airtable Service Dock element (make sure
-          to update the <em>tablename</em> attribute to match your table name).
-          There is also a single SPIKE Prime Service Dock element.</p>
-
-      <img class="documentation_image mb-4" src="../../img/demo1/demo01_local_servicedock.png">
-
-      <p class="font-normal"><b>Local Interface</b></p>
-
-      <p class="font-normal mb-2">The local interface is set up to monitor the "command" value to
-          see if it changes to now equal "Forward", "Backward", or "Stop".
-          In the case of the first two, it'll run whatever MicroPython program
-          is stored on the SPIKE Prime Hub in Slots #0 and #1 respectively. If the
-          "Stop" value is detected, it'll stop the execution of any running programs.</p>
-
-      <img class="documentation_image mb-4" src="../../img/demo1/demo01_local_code.png">
-
-      <p class="font-normal mb-2">This is how these three "cloud check" elements will look on the Local Page:</p>
-
-      <img class="documentation_image mb-4" src="../../img/demo1/demo01_local_interface.png">
-
-  </blockquote>
-
-  <h3 class="text-2xl py-4 mt-6">SPIKE Prime MicroPython Code</h3>
-
-  <blockquote>
-
-      <p class="font-normal"><b>Example Code for SPIKE Prime Hub Slot #0:</b></p>
-
-      <div class="documentation_code mb-2"><pre>
-<code># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-from spike import PrimeHub, Motor
-from spike.control import wait_for_seconds
-
-# motor connected to A:
-my_motor = Motor('A')
-my_motor.start(50) # forward
-wait_for_seconds(2)
-my_motor.stop()</code></pre></div>
-
-<br>
-
-      <p class="font-normal mb-2"><b>Example Code for SPIKE Prime Hub Slot #1:</b></p>
-
-      <div class="documentation_code mb-4"><pre>
-<code># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
-from spike import PrimeHub, Motor
-from spike.control import wait_for_seconds
-
-# motor connected to A:
-my_motor = Motor('A')
-my_motor.start(-50) # backward
-wait_for_seconds(2)
-my_motor.stop()</code></pre></div>
-
-  </blockquote>
+<p class="text-xl">Coming Soon!</p>
 
 </script>
 
