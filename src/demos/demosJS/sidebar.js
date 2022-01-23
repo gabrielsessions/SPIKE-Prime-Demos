@@ -28,7 +28,7 @@ const ARROW_ID_PREFIX = "#arrow_";
 const MENU_ICON_ID = "#hamburger_menu"
 const SIDEBAR_ID = "#sidebar";
 
-const ANIMATION_LENGTH = 500;
+const ANIMATION_LENGTH = 400;
 const SIDEBAR_HIDDEN_MARGIN = "-16rem"; //Tailwind class w-64
 const SIDEBAR_DISPLAY_MARGIN = "0rem";
 

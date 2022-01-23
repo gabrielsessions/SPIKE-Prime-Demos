@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Demo 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--Tailwind CSS Output - Requires NodeJS -->
+        <!-- 
+          Termninal command to generate CSS: 
+          npx tailwindcss -i src/input.css -o public/output.css
+        -->
+        <link rel="stylesheet" href="../../public/output.css">
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!--Old SPIKE PRIME Demo Code Imports-->
+        <script src="https://cdn.jsdelivr.net/gh/tuftsceeo/SPIKE-Web-Interface/cdn/ServiceDock.js" charset="utf-8"></script>
+        <script src="demosJS/secrets.js" charset="utf-8"></script>
+        <script src="demosJS/cloud.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="./demosJS/style.css" />
+
+        <!--File Saver-->
+        <script src="demosJS/fileSaver.js"></script>
+
+        <!--Custom JS Code for this project-->
+        <script src="demosJS/sidebar.js"></script>
+        <script src ="demosJS/loadDemo.js"></script>
+
+
+    </head>
+    <body>
+
+        <!-- Original Template from: https://www.youtube.com/watch?v=DOOoS6GHDw8 -->
+        <div class="relative min-h-screen md:flex">
+
+            <!-- mobile menu bar -->
+            <div class="bg-tufts-blue text-white flex justify-between md:hidden">
+
+          
+              <!-- mobile menu button -->
+              <button class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
+                <a href="../demoList.html">Demo Projects</a>
+              </button>
+            </div>
+          
+            <!-- sidebar -->
+            <div id="sidebar" class="hidden bg-tufts-blue text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out" data-toggled="false">
+          
+              <!-- logo -->
+              <a href="../demoList.html" class="text-white flex items-center space-x-2 px-4">
+                <img class="w-20" src="../../img/codingWhiteImg.png" alt="web dev image">
+                <span class="text-2xl font-bold pl-3">Demo Projects</span>
+              </a>
+          
+              <!-- nav -->
+              <nav>
+                <a href="../demoList.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+                    <span class="inline-block">Home&nbsp;</span>
+                </a>
+
+
+                <button id="demo_1_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+                    <span class="inline-block">1: Simple Buttons&nbsp;</span>
+                    <img id="arrow_1" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+                </button>
+
+
+                <button id="demo_2_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+                    <span class="inline-block">2: Sliders&nbsp;</span>
+                    <img id="arrow_2" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+                </button>
+
+                
+                
+              </nav>
+            </div>
+          
+            <!-- content -->
+            
+            <div class="px-3 py-2 h-11">
+              <button id="hamburger_menu" type="image" class="w-fit">
+                <img src="../../img/hambuger-menu.png" class="w-8">
+                
+              </button>
+              
+            </div>
+            
+            
+
+            <div class="flex-1 pb-10 text-2xl font-bold -translate-y-2">
+              <h1 class="font-bold pt-4 pb-2 mb-3 mt-1 text-xl text-left inline-block">&nbsp; Demo 1: Simple Buttons</h1>
+
+              <div class="inline-block ml-6 justify-between text-lg">
+                <button id="remoteUpperTab" type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
+                  Remote
+                </button>
+                <button id="localUpperTab" type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 p-1">
+                  Local
+                </button>
+                <button id="documentationUpperTab" type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
+                  Documentation
+                </button>
+              </div>
+              
+              
+              <div class="grid grid-cols-2 mt-1">
+
+                <!-- Edit Code Column -->
+                <div class="border border-black p-2">
+
+                  <p class="mt-2 mb-1">Modify this project!</p>
+                  <!-- 
+                    Icon Attribution 
+                  <a href="https://www.flaticon.com/free-icons/download" title="download icons">Download icons created by Kiranshastry - Flaticon</a>
+                  -->
+                  <button id="downloadButton" type="image" class="hover:bg-gray-300 px-2 rounded inline-block">
+                    <p class="font-normal text-xl mb-2  inline-block">Download</p>
+                    <img src="../../img/download.png" alt="download" class="h-6 inline-block">
+                  </button>
+
+                  <p class="text-sm mb-2 text-red-500 inline-block">Download this page to save your work</p>
+                  
+
+                  <!--https://tailwind-elements.com/docs/standard/forms/textarea/-->
+                  
+                  <div class="justify-center"> 
+                  <textarea
+                    class="
+                      form-control
+                      px-3
+                      py-1.5
+                      text-base
+                      font-normal
+                      text-gray-700
+                      bg-white bg-clip-padding
+                      border border-solid border-gray-300
+                      rounded
+                      transition
+                      ease-in-out
+                      m-1
+                      focus:text-black focus:bg-white focus:border-tufts-blue focus:outline-none
+                      flex-none
+                      
+                    "
+                    id="userHTMLTextArea"
+                    rows="15"
+                    style="width: 100%;"
+                    value=""
+                    
+                    
+                    
+                  > </textarea>
+                  </div> 
+
+                  <button type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 mt-2 mb-4 p-2 text-xl hover:bg-tufts-darker-blue" id="changeHTMLButton">
+                    Apply Changes
+                  </button> 
+                    
+                  
+
+                  <h3>My API Key: (Functionality coming soon!)</h3>
+                  <textarea 
+                  id="apikey"
+                  class="form-control
+                    w-max
+                    px-3
+                    py-1.5
+                    text-base
+                    font-normal
+                    text-gray-700
+                    bg-white bg-clip-padding
+                    border border-solid border-gray-300
+                    rounded
+                    transition
+                    ease-in-out
+                    m-1
+                    focus:text-black focus:bg-white focus:border-tufts-blue focus:outline-none"
+                  rows="1" placeholder="API Key" style="width: 60%;"></textarea>
+
+                  <h3>My Base ID:</h3>
+                  <textarea 
+                  id="baseID"
+                  class="form-control
+                    w-max
+                    px-3
+                    py-1.5
+                    text-base
+                    font-normal
+                    text-gray-700
+                    bg-white bg-clip-padding
+                    border border-solid border-gray-300
+                    rounded
+                    transition
+                    ease-in-out
+                    m-1
+                    focus:text-black focus:bg-white focus:border-tufts-blue focus:outline-none" 
+                  rows="1" placeholder="Base ID" style="width: 60%;"></textarea>
+
+                 
+
+                </div>
+
+
+
+
+                <div id="demoOutput" class="border border-black mx-2 p-2">
+                  <!-- Add Demo HTML Here -->
+                  
+                </div>
+
+
+
+              </div>
+            </div>
+            </div>
+          
+        
+
+
+        <script id="tabLinks" type="text/html">
+            
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+                Remote Page
+                
+            </a>
+
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.htm">
+                Local Page
+                
+            </a>
+
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="#">
+                Documentation
+                
+            </a>
+            
+            
+        </script>
+
+
+
+
+        <script id="demoContent" type="text/html">
+<!-- NOTE: This project uses Tailwind CSS -->
+<!-- To view this page without Tailwind, please download this file -->
+
+<div id="servicedock">
+    <service-airtable id="service_airtable" tablename="demo01"></service-airtable>
+    <service-spike id="service_spike"></service-spike>
+</div>
+
+<h1>Demo 01: Simple Buttons</h1>
+
+<h2 class="text-lg font font-normal">Local Interface</h2>
+
+<p class="text-sm font-normal">This demo shows simple buttons that activate code within SPIKE Prime Slots.</p> <br>
+
+
+
+<div class="cloud_check">
+    <b><em>Monitor Cloud:</em></b>
+
+    <div type="cloud_check" cloud_compare="equal" cloud_action="run_slot" class="my-1">
+        <input type=text id="cloud_name" value="command" class="inline border border-black">
+        <input type=text id="cloud_value" value="Forward" class="inline border border-black">
+        <input type=text id="cloud_action_val" value="0" class="inline border border-black">
+    </div>
+
+    <div type="cloud_check" cloud_compare="equal" cloud_action="run_slot" class="my-1">
+        <input type=text id="cloud_name" value="command" class="inline border border-black">
+        <input type=text id="cloud_value" value="Backward" class="inline border border-black">
+        <input type=text id="cloud_action_val" value="1" class="inline border border-black">
+    </div>
+
+    <div type="cloud_check" cloud_compare="equal" cloud_action="stop_slot" class="my-1">
+        <input type=text id="cloud_name" value="command" class="inline border border-black">
+        <input type=text id="cloud_value" value="Stop" class="inline border border-black">
+    </div>
+
+</div>
+
+
+
+        
+
+        </script>
+
+
+
+
+
+
+
+    </body>
+
+
+
+<!--Template used for download-->
+<!--This code Will trigger an error in the console due to the generalized file paths-->
+<script id="downloadShell" type="text/html">
+<head>
+  <title>Demo 01: Simple Buttons (Remote)</title>
+
+  
+<style>
+    #servicedock {
+  float: right;
+}
+
+.buttonBlock{
+    /*Give your button block some style!
+    Add color, change the border, and
+    change the size using CSS styling*/
+    background-color:lightblue;
+    border:solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    width:30%;
+}
+
+.sliderBlock{
+    /*Give your slider block some style!
+    Add color, change the border, and
+    change the size using CSS styling*/
+    background-color:orange;
+    border:solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    width:30%;
+}
+
+.textBlock{
+    /*Give your text block some style!
+    Add color, change the border, and
+    change the size using CSS styling*/
+    background-color:lightgreen;
+    border:solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    width:30%;
+}
+
+/* homepage styling */
+.table_links {
+  border: 1px solid black;
+  padding: 10px;
+}
+.remote {
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: lightgreen;
+}
+.local {
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: pink;
+}
+.documentation {
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: lightyellow;
+}
+
+/* local styling for cloud interaction */
+.cloud_check {
+  padding: 5px;
+  background-color: lightyellow;
+}
+.cloud_table {
+  padding: 5px;
+}
+.cloud_table td {
+  padding: 5px;
+	vertical-align: top;
+}
+.cloud_active {
+	background-color: lightgreen;
+}
+.cloud_inactive {
+	background-color: none;
+}
+
+/* documentation styles */
+.documentation_image {
+  border: 1px solid black;
+}
+.documentation_code {
+  padding: 5px;
+  background-color: lightyellow;
+}
+
+</style>
+
+
+  <!-- Add Script Tags to secret.js and cloud.js below the Service Dock CDN -->
+
+  <!-- Add link tags to your stylesheets here -->
+
+</head>
+
+<!-- Body Inserted Here Automatically -->
+
+
+</script>
+
+
+
+
+    <script>
+      var mycode = `
+      # MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+  from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+  from spike.control import wait_for_seconds, wait_until, Timer
+  
+  hub = PrimeHub()
+  
+  # Port Letter is on the hub
+  
+  motorA = Motor ('A') #large motor for arm
+  motorB = Motor ('B') #medium motor for arm 
+  
+  init_power = 100
+  
+  motorA.start_at_power(init_power)
+  motorB.start_at_power(init_power)
+  
+  #pattern will be drawn for 12 seconds
+  wait_for_seconds(12)
+  
+  motorA.stop()
+  motorB.stop()
+  
+  
+      `
+  
+      
+  </script>
+
+
+</html>

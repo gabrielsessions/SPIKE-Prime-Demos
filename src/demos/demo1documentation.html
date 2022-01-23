@@ -1,87 +1,275 @@
-<!--
-    SPIKE Prime Web Projects
-    Gabriel Sessions
-
-    Purpose: Compile resources for students to use when building their final EN 1 project
-
-    Attributions To Add: 
-
-    <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a>
-
-    <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a>
--->
-
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Test Page</title>
+        <title>Demo 1</title>
         <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!--Uses Tailwind CSS-->
-        <link rel="stylesheet" href="../public/output.css">
+        <!--Tailwind CSS Output - Requires NodeJS -->
+        <!-- 
+          Termninal command to generate CSS: 
+          npx tailwindcss -i src/input.css -o public/output.css
+        -->
+        <link rel="stylesheet" href="../../public/output.css">
 
         <!--jQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="demo1.js"></script>
+
+        <!--Old SPIKE PRIME Demo Code Imports-->
+        <script src="https://cdn.jsdelivr.net/gh/tuftsceeo/SPIKE-Web-Interface/cdn/ServiceDock.js" charset="utf-8"></script>
+        <script src="demosJS/secrets.js" charset="utf-8"></script>
+        <script src="demosJS/cloud.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="./demosJS/style.css" />
+
+        <!--File Saver-->
+        <script src="demosJS/fileSaver.js"></script>
+
+        <!--Custom JS Code for this project-->
+        <script src="demosJS/sidebar.js"></script>
+        <script src ="demosJS/loadDocumentation.js"></script>
+
 
     </head>
     <body>
-        
-        <!-- Navbar -->
 
-        <div class="bg-gray-100 max-w-8xl text-sans sticky top-0">
-            <ul class="flex py-4">
+        <!-- Original Template from: https://www.youtube.com/watch?v=DOOoS6GHDw8 -->
+        <div class="relative min-h-screen md:flex">
 
-                <!-- Image and Webpage title link to the home page (index.html) -->
-                <div class="mr-1 ml-6">
-                    <li>
-                        <a href = "https://google.com">
-                        <img src="../img/coding.png" class="h-10 w-auto">
-                        </a>
-                    </li>
-                </div>
+            <!-- mobile menu bar -->
+            <div class="bg-tufts-blue text-white flex justify-between md:hidden">
+
+          
+              <!-- mobile menu button -->
+              <button class="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
+                <a href="../demoList.html">Demo Projects</a>
+              </button>
+            </div>
+          
+            <!-- sidebar -->
+            <div id="sidebar" class="hidden bg-tufts-blue text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out" data-toggled="false">
+          
+              <!-- logo -->
+              <a href="../demoList.html" class="text-white flex items-center space-x-2 px-4">
+                <img class="w-20" src="../../img/codingWhiteImg.png" alt="web dev image">
+                <span class="text-2xl font-bold pl-3">Demo Projects</span>
+              </a>
+          
+              <!-- nav -->
+              <nav>
+                <a href="../demoList.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+                    <span class="inline-block">Home&nbsp;</span>
+                </a>
+
+
+                <button id="demo_1_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+                    <span class="inline-block">1: Simple Buttons&nbsp;</span>
+                    <img id="arrow_1" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+                </button>
+
+
+                <button id="demo_2_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+                    <span class="inline-block">2: Sliders&nbsp;</span>
+                    <img id="arrow_2" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+                </button>
+
+                
+                
+              </nav>
+            </div>
+          
+            <!-- content -->
             
-                <div class="mr-14 ml-1">
-                    <li>
-                        <a href="../index.html">
-                            <h1 class="py-1 px-3 text-xl text-black font-bold">SPIKE Prime Web Projects</h1>
-                        </a>
-                    </li>
-                </div>
-
-
-                <!-- Navbar Tabs -->
-                <div class="mr-4">
-                    <li>
-                    <a class="inline-block border border-tufts-blue rounded py-1 px-3 bg-tufts-blue text-white" href="../index.html">Home</a>
-                    </li>
-                </div>
-                <li class="mr-4">
-                <a class="inline-block border border-gray-100 rounded hover:border-gray-200 text-tufts-blue hover:bg-gray-200 py-1 px-3" href="#">Tutorials</a>
-                </li>
-                <li class="mr-4">
-                    <a class="inline-block border border-gray-100 rounded hover:border-gray-200 text-tufts-blue hover:bg-gray-200 py-1 px-3" href="#">Demos</a>
-                </li>
-                <li class="mr-4">
-                    <a class="inline-block border border-gray-100 rounded hover:border-gray-200 text-tufts-blue hover:bg-gray-200 py-1 px-3" href="#">Template Project</a>
-                </li>
-            </ul>
+            <div class="px-3 py-2 h-11">
+              <button id="hamburger_menu" type="image" class="w-fit">
+                <img src="../../img/hambuger-menu.png" class="w-8">
+                
+              </button>
+              
+            </div>
             
-        
-        </div>
-    
-        
-        
-         
+            
+
+            <div class="flex-1 pb-10 text-2xl font-bold -translate-y-2">
+              <h1 class="font-bold pt-4 pb-2 mb-3 mt-1 text-xl text-left inline-block">&nbsp; Demo 1: Simple Buttons</h1>
+
+              <div class="inline-block ml-6 justify-between text-lg">
+                <button id="remoteUpperTab" type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
+                  Remote
+                </button>
+                <button id="localUpperTab" type="button" class="text-tufts-blue rounded bg-white mx-2 p-1 hover:bg-gray-200">
+                  Local
+                </button>
+                <button id="documentationUpperTab" type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 p-1">
+                  Documentation
+                </button>
+              </div>
 
 
+                <div id="documentationFrame" class="border border-black mr-2 px-2 text-sm">
+                
+                </div>
+              
+              
+              
+
+
+              </div>
+
+
+              
+
+            </div>
+            
+            </div>
+
+
+
+        
+          
         
 
 
-        
-        
+        <script id="tabLinks" type="text/html">
+            
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+                Remote Page
+                
+            </a>
+
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+                Local Page
+                
+            </a>
+
+            <a href="#" class="block py-2.5 px-4 mx-8 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="#">
+                Documentation
+                
+            </a>
+            
+            
+        </script>
+
+
+
+
+
+
+
+
     </body>
-</html>
+
+
+
+<!-- Documentation HTML body to be inserted -->
+
+<script id="documentationOriginalCode" type="text/html">
+
+<p class="font-normal my-2">This demo shows simple buttons that activate code within SPIKE Prime Slots.</p>
+
+<h2>Documentation</h2>
+
+  <p class="font-normal">Be sure to view the <a href="../documentation/index.html">overall Documentation</a> for configuring
+      the cloud storage (API key, Base ID, etc) and for more information on how the entire system works.</p>
+
+  <h3>Airtable Setup</h3>
+
+  <blockquote>
+
+      <p class="font-normal">The "Name" column has an entry "command" that will hold the different
+          commands being sent by the buttons. The "Value" can be "Forward",
+          "Backward", or "Stop".</p>
+
+      <img class="documentation_image" src="../../img/demo1/demo01_airtable.png">
+
+  </blockquote>
+
+  <h3>Remote Page Setup</h3>
+
+  <blockquote>
+
+      <p><b>Service Dock</b></p>
+
+      <p class="font-normal">The remote page has the Airtable Service Dock element. Make sure to
+          update the <em>tablename</em> attribute to match your table name.</p>
+
+      <img class="documentation_image" src="../../img/demo1/demo01_remote_servicedock.png">
+
+      <p><b>Remote Interface</b></p>
+
+      <p class="font-normal">These simple HTML buttons will "update" the Airtable data "command" to be
+          "Forward", "Backward", or "Stop" respectively.</p>
+
+      <img class="documentation_image" src="../../img/demo1/demo01_remote_code.png">
+
+      <p class="font-normal">This is how these three buttons will look on the Remote Page:</p>
+
+      <img class="documentation_image" src="../../img/demo1/demo01_remote_interface.png">
+
+  </blockquote>
+
+  <h3>Local Page Setup</h3>
+
+  <blockquote>
+
+      <p class="font-normal"><b>Service Dock</b></p>
+
+      <p class="font-normal">The local page has both the Airtable Service Dock element (make sure
+          to update the <em>tablename</em> attribute to match your table name).
+          There is also a single SPIKE Prime Service Dock element.</p>
+
+      <img class="documentation_image" src="../../img/demo1/demo01_local_servicedock.png">
+
+      <p class="font-normal"><b>Local Interface</b></p>
+
+      <p class="font-normal">The local interface is set up to monitor the "command" value to
+          see if it changes to now equal "Forward", "Backward", or "Stop".
+          In the case of the first two, it'll run whatever MicroPython program
+          is stored on the SPIKE Prime Hub in Slots #0 and #1 respectively. If the
+          "Stop" value is detected, it'll stop the execution of any running programs.</p>
+
+      <img class="documentation_image" src="../../img/demo1/demo01_local_code.png">
+
+      <p class="font-normal">This is how these three "cloud check" elements will look on the Local Page:</p>
+
+      <img class="documentation_image" src="../../img/demo1/demo01_local_interface.png">
+
+  </blockquote>
+
+  <h3>SPIKE Prime MicroPython Code</h3>
+
+  <blockquote>
+
+      <p class="font-normal"><b>Example Code for SPIKE Prime Hub Slot #0:</b></p>
+
+      <div class="documentation_code"><pre>
+<code># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+from spike import PrimeHub, Motor
+from spike.control import wait_for_seconds
+
+# motor connected to A:
+my_motor = Motor('A')
+my_motor.start(50) # forward
+wait_for_seconds(2)
+my_motor.stop()</code></pre></div>
+
+      <p class="font-normal"><b>Example Code for SPIKE Prime Hub Slot #1:</b></p>
+
+      <div class="documentation_code"><pre>
+<code># MicroPython for LEGO Hardware (LEGO Education's SPIKE Prime)
+from spike import PrimeHub, Motor
+from spike.control import wait_for_seconds
+
+# motor connected to A:
+my_motor = Motor('A')
+my_motor.start(-50) # backward
+wait_for_seconds(2)
+my_motor.stop()</code></pre></div>
+
+  </blockquote>
+
+</script>
+
