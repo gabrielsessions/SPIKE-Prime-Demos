@@ -30,8 +30,12 @@ $(document).ready( () => {
 
 
 
-    $('#viewDemosButton').click( () => {
+    $('#viewDemosButton').click(() => {
         window.location.href = "demoList.html";
+    });
+
+    $('#viewTutorialsButton').click(() => {
+        window.location.href = "https://canvas.tufts.edu/courses/31584/pages/help-html-css-and-javascript";
     });
 
 
