@@ -1180,6 +1180,21 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-line: underline;
 }
 
+.decoration-tufts-blue {
+  -webkit-text-decoration-color: #3E8EDE;
+          text-decoration-color: #3E8EDE;
+}
+
+.decoration-solid {
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+
+.decoration-dotted {
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1257,6 +1272,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:decoration-sky-300:hover {
+  -webkit-text-decoration-color: #7dd3fc;
+          text-decoration-color: #7dd3fc;
 }
 
 .focus\:border-tufts-blue:focus {

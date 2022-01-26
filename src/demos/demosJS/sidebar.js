@@ -11,6 +11,8 @@ Purpose: Provide submenu and toggleable functionality to the sidebar on the demo
 //TODO: Generate main tabs in addition to submenus in this file
 
 const NUM_OF_TABS = 2;
+const CONST_TABS = ["Home", "Template Project"];
+const VAR_TAB_NAMES = ["1: Simple Buttons", "2: Range Sliders"];
 
 const SUBMENU_PREFIX = "demo";
 const SUBMENU_SUFFIX = ["remote.html", "local.html", "documentation.html"];
@@ -35,11 +37,20 @@ const SIDEBAR_DISPLAY_MARGIN = "0rem";
 const UPPER_TAB_IDS = ['#remoteUpperTab', '#localUpperTab', '#documentationUpperTab'];
 
 //Returns the demo number from a demo id string
-function demoNumber (demoId) {
+function demoNumber(demoId) {
     return (demoId.split("_")[1]);
 }
 
-function createArrayOfTabs () {
+function createSidebarElement() {
+    const sidebarElement = createElement('div');
+
+    $(sidebarElement).addClass('hidden fixed bg-tufts-blue text-white w-64 space-y-6 py-7 px-2  inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out');
+    $(sidebarElement).attr('id', 'sidebar');
+    $(sidebarElement).attr('data-toggled', 'false');
+
+}
+
+function createArrayOfTabs() {
 
     //Creates an array with IDs of all navbar tabs - returns the array when finished appending submenus
     let arrOfTabs = [];

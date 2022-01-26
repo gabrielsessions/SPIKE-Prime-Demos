@@ -46,42 +46,14 @@
                 <a href="../demoList.html">Demo Projects</a>
               </button>
             </div>
-          
-            <!-- sidebar -->
-            <div id="sidebar" class="hidden fixed bg-tufts-blue text-white w-64 space-y-6 py-7 px-2  inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out " data-toggled="false">
-          
-              <!-- logo -->
-              <a href="../demoList.html" class="text-white flex items-center space-x-2 px-4">
-                <img class="w-20" src="../../img/codingWhiteImg.png" alt="web dev image">
-                <span class="text-2xl font-bold pl-3">Demo Projects</span>
-              </a>
-          
-              <!-- nav -->
-              <nav>
-                <a href="../demoList.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
-                    <span class="inline-block">Home&nbsp;</span>
-                </a>
 
+            <div id="sidebarContainer">
 
-                <button id="demo_1_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
-                    <span class="inline-block">1: Simple Buttons&nbsp;</span>
-                    <img id="arrow_1" src="../../img/downArrowWhite.png" class="w-3 inline-block">
-
-                </button>
-
-
-                <button id="demo_2_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
-                    <span class="inline-block">2: Range Sliders&nbsp;</span>
-                    <img id="arrow_2" src="../../img/downArrowWhite.png" class="w-3 inline-block">
-
-                </button>
-
-                
-                
-              </nav>
             </div>
           
-            <!-- content -->
+           
+          
+            <!-- main content -->
             
             <div class="px-3 py-2 h-11">
               <button id="hamburger_menu" type="image" class="w-fit">
@@ -157,6 +129,44 @@
 
 
     </body>
+
+<!-- Sidebar Template Code -->
+<script id="sidebarTemplate" type="text/html">
+   <!-- sidebar -->
+<div id="sidebar" class="hidden fixed bg-tufts-blue text-white w-64 space-y-6 py-7 px-2  inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out" data-toggled="false">
+      
+<!-- logo -->
+  <a href="../demoList.html" class="text-white flex items-center space-x-2 px-4">
+    <img class="w-20" src="../../img/codingWhiteImg.png" alt="web dev image">
+    <span class="text-2xl font-bold pl-3">Demo Projects</span>
+  </a>
+
+  <!-- nav -->
+  <nav>
+    <a href="../demoList.html" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white" href="./index.html">
+        <span class="inline-block">Home&nbsp;</span>
+    </a>
+
+
+    <button id="demo_1_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+        <span class="inline-block">1: Simple Buttons&nbsp;</span>
+        <img id="arrow_1" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+    </button>
+
+
+    <button id="demo_2_button" role="button" tabindex="0" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700 hover:text-white w-full text-left" href="./index.html" data-dropdown="false">
+        <span class="inline-block">2: Range Sliders&nbsp;</span>
+        <img id="arrow_2" src="../../img/downArrowWhite.png" class="w-3 inline-block">
+
+    </button>
+
+    
+    
+  </nav>
+</div>
+
+</script>
 
 
 
