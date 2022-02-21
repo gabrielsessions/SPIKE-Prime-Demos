@@ -40,6 +40,9 @@ $(document).ready( () => {
         window.location.href = "https://canvas.tufts.edu/courses/31584/pages/help-html-css-and-javascript";
     });
 
+    $('#viewTemplate').click(() => {
+        window.location.href = "template.html";
+    }); 
 
 } );
 

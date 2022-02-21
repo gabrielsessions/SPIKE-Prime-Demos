@@ -15,7 +15,7 @@ function fadeInElements(elements) {
     
 }
 
-$(document).ready( () => {
+jQuery( () => {
 
     //jQuery.fx.interval = 10000;
 
@@ -36,6 +36,10 @@ $(document).ready( () => {
 
     $('#viewTutorialsButton').click(() => {
         window.location.href = "https://canvas.tufts.edu/courses/31584/pages/help-html-css-and-javascript";
+    });
+
+    $('#viewTemplate').click(() => {
+        window.location.href = "template.html";
     });
 
 

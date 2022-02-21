@@ -1,12 +1,225 @@
+<!--
+    SPIKE Prime Web Projects
+    Gabriel Sessions
+
+    Purpose: Compile resources for students to use when building their final EN 1 project
+
+    Attributions To Add: 
+
+    <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a>
+
+    <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a>
+-->
+
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Page</title>
+        <meta name="description" content="">
+
+        <!--Uses Tailwind CSS-->
+        <link rel="stylesheet" href="../../public/output.css">
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        
+
+        <script src="../js/main.js"></script>
+
+    </head>
+    <body>
+        
+
     
-</body>
+        <!--Main Homepage Content-->
+        <div class="w-full h-full bg-no-repeat bg-cover bg-waves">
+
+
+        <!-- Page Title -->
+        <h1 class="text-center justify-center pt-8 mb-12 text-6xl font-sans text-black">Example Projects & Demos</h1>
+
+
+        <!--Two smaller boxes for tutorials and template project-->
+       
+
+        <!-- Larger Block with Demos -->
+        <div class="flex justify-center">
+            <div id="demosButtonBox" class="border rounded-md border-white bg-white mt-4 mb-16 px-4 py-4 shadow-xl ">
+                <div class="text-xl text-center justify-center pt-4 pb-3 mb-4">
+                    Demo List
+                </div>
+
+                <!-- Three Columns for Demos -->
+                
+
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                <div class="flex flex-col">
+                    <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Demo Name
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Description
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Status
+                                </th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Link
+                                </th>
+                                <th scope="col" class="relative px-6 py-3">
+                                <span class="sr-only">Edit</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    
+                                    <div class="ml-4">
+                                    <div class="text-sm font-medium text-gray-900">
+                                        Demo 1
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        Simple Buttons
+                                    </div>
+                                    </div>
+                                </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">This demo shows <b>simple buttons</b> that <br> activate code within SPIKE Prime Slots.</div>
+                                
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                    Active
+                                </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <a href="demos/demo1remote.html" class="border border-tufts-blue rounded py-2 px-3 bg-tufts-blue text-white hover:bg-tufts-darker-blue" href="demos/demo1remote.html">Demo 1</a>
+                                </td>
+
+                                
+                            </tr>
+
+                            <tr>
+                                <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    
+                                    <div class="ml-4">
+                                    <div class="text-sm font-medium text-gray-900">
+                                        Demo 2
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        Range Sliders
+                                    </div>
+                                    </div>
+                                </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">This demo shows how to use <b>range sliders</b> <br> to allow user to select a number.</div>
+                                
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                    In Progress
+                                </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <a class="border border-tufts-blue rounded py-2 px-3 bg-tufts-blue text-white hover:bg-tufts-darker-blue" href="demos/demo2remote.html">Demo 2</a>
+                                </td>
+
+                                
+
+                                
+                            </tr>
+
+                            <tr>
+                                <td class="px-2 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    
+                                    <div class="ml-4">
+                                    <div class="text-sm font-medium text-gray-900">
+                                        Demo 3
+                                    </div>
+                                    <div class="text-sm text-gray-500">
+                                        Text Box
+                                    </div>
+                                    </div>
+                                </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">This demo shows how to use a <b>textbox input</b><br> for user to supply content.</div>
+                                
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">
+                                    Unavaliable
+                                </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                <a class="border border-tufts-blue rounded py-2 px-3 bg-white text-tufts-blue" href="#">Demo 3</a>
+                            </td>
+                
+                            
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+  
+
+                
+            </div>
+            
+        </div>
+
+
+
+
+        <!-- Footer -->
+
+        <div id="creditsBox" class="flex justify-center">
+            <div id="demosButtonBox" class="border rounded-md border-white bg-white mt-4 mb-16 mx-10 shadow-xl w-full">
+
+                
+                <div class="justify-center text-center py-10">
+
+                    Credits/Attributions <br>
+
+                    <a href="https://www.flaticon.com/free-icons/development" title="development icons">Development icons created by Freepik - Flaticon</a> <br>
+
+                    <a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a> <br>
+
+
+
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+        <!--End Div Tags for background images-->
+        </div>
+        
+         
+
+
+        
+
+
+        
+        
+    </body>
 </html>

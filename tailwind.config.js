@@ -2,6 +2,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: ["./src/**/*.{html,js}",
+            "./src/**/**/*.{html,js}",
             "./index.html",
             "./demoList.html",
             ],
@@ -13,6 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         'homepage': 'url("../img/geometricBG.jpg")',
+        'waves': 'url("../img/stackedbg.jpg")',
       },
     },
   },

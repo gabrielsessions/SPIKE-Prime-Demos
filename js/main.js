@@ -2,6 +2,7 @@
 //npm install --save-dev @types/jquery
 //Takes in an array of elements and applies a fade in effect when the page is loaded
 //Not currently in use
+//TODO: Either implement or delete
 /*
 function fadeInElements(elements) {
 
@@ -28,5 +29,8 @@ $(document).ready(function () {
     });
     $('#viewTutorialsButton').click(function () {
         window.location.href = "https://canvas.tufts.edu/courses/31584/pages/help-html-css-and-javascript";
+    });
+    $('#viewTemplate').click(function () {
+        window.location.href = "template.html";
     });
 });
