@@ -14,7 +14,7 @@ module.exports = {
       },
       backgroundImage: {
         'homepage': 'url("../img/geometricBG.jpg")',
-        'waves': 'url("../img/stackedbg.jpg")',
+        'waves': 'url("../img/wavesbg.svg")',
       },
     },
   },
