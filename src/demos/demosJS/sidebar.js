@@ -12,7 +12,7 @@ Purpose: Provide submenu and toggleable functionality to the sidebar on the demo
 
 const NUM_OF_TABS = 2;
 const CONST_TABS = ["Home", "Template Project"];
-const VAR_TAB_NAMES = ["1: Simple Buttons", "2: Range Sliders"];
+const VAR_TAB_NAMES = ["1: Simple Buttons", "2: Range Sliders", "Blank Project"];
 
 const SUBMENU_PREFIX = "demo";
 const SUBMENU_SUFFIX = ["remote.html", "local.html", "documentation.html"];
@@ -198,5 +198,9 @@ jQuery(() => {
     });
 
     createUpperNav();
+
+    $("#blank_project_button").click(() => {
+        window.location.href = "demo100remote.html";
+    });
     
 });

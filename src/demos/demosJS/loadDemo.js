@@ -79,7 +79,7 @@ function downloadCode() {
 
 function enableTabKeyTextarea(textAreaId) {
     $(textAreaId).keydown(function(e) {
-        if(e.keyCode === 9) { // tab was pressed
+        if (e.keyCode === 9) { // tab was pressed
             // get caret position/selection
             let start = this.selectionStart;
             let end = this.selectionEnd;
@@ -117,7 +117,8 @@ function confirmRevert() {
             Swal.fire(
                 'Project code has been reverted to the original demo code',
                 'Your edits has been deleted',
-                'success'
+                'success',
+                
             );
             console.log("hello!");
           
@@ -135,19 +136,12 @@ function activateRevertButton() {
     
 }
 
-// Saves code every 30 seconds
-function enableAutosave() {
-    setInterval(() => {
-        let curCode = $(INPUT_TEXTAREA_ID).val();
-        saveCode(curCode, true);
-    }, AUTOSAVE_SECONDS * 1000);
-    
+function autosave() {
+    let curCode = $(INPUT_TEXTAREA_ID).val();
+    saveCode(curCode, true);
+    console.log("autosaving...");
+    return curCode;
 }
-
-function checkForAutosave() {
-
-}
-
 
 
 jQuery(function () {
@@ -169,8 +163,6 @@ jQuery(function () {
 
     enableTabKeyTextarea(INPUT_TEXTAREA_ID);
 
-    enableAutosave();
-
     let previousCode = getPreviousCode();
     if (previousCode != null && previousCode != "") {
         $(INPUT_TEXTAREA_ID).val(previousCode);
@@ -178,6 +170,18 @@ jQuery(function () {
         $(LAST_SAVED_ID).html("Last Saved: No saves in the current session");
         $(SAVING_ICON_ID).attr("style", "display:none");
     }
+
+
+    //Autosave interval initialization and check 
+
+    let currentCode = $(INPUT_TEXTAREA_ID).html();
+
+    setInterval(() => {
+        if (currentCode != $(INPUT_TEXTAREA_ID).val()) {
+            currentCode = autosave();
+        }
+        
+    }, AUTOSAVE_SECONDS * 1000);
 
     
 });
