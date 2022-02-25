@@ -184,7 +184,7 @@ function createUpperNav() {
 }
 
 
-$(document).ready(() => {
+jQuery(() => {
 
     const sideBarTabs = createArrayOfTabs();
 

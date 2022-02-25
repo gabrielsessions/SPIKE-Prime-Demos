@@ -26,9 +26,13 @@
         <!--File Saver-->
         <script src="demosJS/fileSaver.js"></script>
 
+        <!--Swal 2-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.all.min.js" integrity="sha512-IZ95TbsPTDl3eT5GwqTJH/14xZ2feLEGJRbII6bRKtE/HC6x3N4cHye7yyikadgAsuiddCY2+6gMntpVHL1gHw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
         <!--Custom JS Code for this project-->
         <script src="demosJS/sidebar.js"></script>
         <script src ="demosJS/loadDemo.js"></script>
+        <script src="demosJS/saveCode.js"></script>
 
 
     </head>
@@ -124,7 +128,21 @@
                     <img src="../../img/download.png" alt="download" class="h-6 inline-block">
                   </button>
 
-                  <p class="text-sm mb-2 text-red-500 inline-block">Download this page to save your work</p>
+                  <p class="text-sm mb-2 text-red-500 inline-block">Download this page to backup your work</p>
+
+
+                  <!-- Add inline-flex to class list when active, hidden when not-->
+                  <div id="savingIcon" class="whitespace-nowrap hidden">
+
+                    <div class="ml-4 inline font-normal text-lg">
+                      
+                      Saving...
+                      
+                    </div>
+                    <div class="inline whitespace-nowrap ml-2" style="height:28px">
+                      <img style="height: 28px;" src="../../img/saveLoader.gif">
+                    </div>
+                 </div>
                   
 
                   <!--https://tailwind-elements.com/docs/standard/forms/textarea/-->
@@ -161,6 +179,11 @@
                   <button type="button" class="border border-tufts-blue text-white rounded bg-tufts-blue mx-2 mt-2 mb-4 p-2 text-xl hover:bg-tufts-darker-blue" id="changeHTMLButton">
                     Apply Changes
                   </button> 
+
+
+                  <div id="lastSaved" class="inline font-normal text-sm ml-8 mb-4">
+                    Last Saved: No saves in the current session
+                  </div>
                     
                   
 
@@ -202,7 +225,11 @@
                     focus:text-black focus:bg-white focus:border-tufts-blue focus:outline-none" 
                   rows="1" placeholder="Base ID" style="width: 60%;"></textarea>
 
-                 
+                 <!-- Revert to Deafault button -->
+                 <br>
+                 <button id="revertToDefault" type="button" class="border border-red-700 text-white rounded bg-red-700 mx-2 mt-2 mb-4 p-2 text-xl hover:bg-red-800" id="changeHTMLButton">
+                   Revert to Default Code
+                 </button> 
 
                 </div>
 
